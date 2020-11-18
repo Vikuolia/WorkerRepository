@@ -12,7 +12,7 @@
     <artifactId>worker</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>worker</name>
-    <description>Travel Agency project for Spring Boot</description>
+    <description>Travel-Agency project for Spring Boot</description>
 
     <properties>
         <java.version>11</java.version>

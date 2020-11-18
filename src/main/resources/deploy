@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ta-workers
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ta-workers
+  template:
+    metadata:
+      labels:
+        app: ta-workers
+    spec:
+      containers:
+        - image: vicuolia/workerservice
+          name: ta-workers
+          ports:
+            - containerPort: 8086
+              name: ta-workers
+          env:
+            - name: POSTGRES_ENDPOINT
+              value: "jdbc:postgresql://localhost:5432/"
+            - name: POSTGRES_PASSWORD
+              value: "1qwerty2asdfg"
+            - name: POSTGRES_USERNAME
+              value: "travel_agency"

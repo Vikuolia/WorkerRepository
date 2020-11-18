@@ -20,7 +20,7 @@ import java.util.UUID;
 public class Worker {
 
     @Id
-    private UUID workerId;
+    private String workerId;
 
     private String name;
     private String surname;
