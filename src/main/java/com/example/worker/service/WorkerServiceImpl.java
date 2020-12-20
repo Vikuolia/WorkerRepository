@@ -27,6 +27,11 @@ public final class WorkerServiceImpl implements WorkerService {
     }
 
     @Override
+    public Worker getWorkerById(String id) {
+        return workerRepository.getOne(id);
+    }
+
+    @Override
     public void deleteById(String id) {
         workerRepository.deleteById(id);
     }

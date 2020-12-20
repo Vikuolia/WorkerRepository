@@ -10,5 +10,7 @@ public interface WorkerService {
 
     List<Worker> getAll();
 
+    Worker getWorkerById(String id);
+
     void deleteById(String id);
 }
