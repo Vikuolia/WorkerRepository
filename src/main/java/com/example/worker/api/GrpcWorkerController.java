@@ -19,12 +19,11 @@ public class GrpcWorkerController extends WorkerServiceGrpc.WorkerServiceImplBas
 
     @Override
     public void add(WorkerRequest request, StreamObserver<WorkerResponse> responseObserver) {
-        String workerId = request.getId();
         String name = request.getName();
         String surname = request.getSurname();
         Position position = Position.valueOf(request.getPosition().toString());
 
-        Worker workerAdd = new Worker(workerId, name, surname, position);
+        Worker workerAdd = new Worker(name, surname, position);
         Worker workerResponse = workerService.addWorker(workerAdd);
 
         WorkerResponse response = WorkerResponse.newBuilder()

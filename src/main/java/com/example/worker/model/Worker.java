@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.UUID;
 
 
 @EnableAutoConfiguration
@@ -26,6 +27,7 @@ public class Worker {
     private Position position;
 
     public Worker(String name, String surname, Position position){
+        this.workerId = UUID.randomUUID().toString();
         this.name = name;
         this.surname = surname;
         this.position = position;

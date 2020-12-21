@@ -9,10 +9,9 @@ enum Position {
 }
 
 message WorkerRequest{
-  string id = 1;
-  string name = 2;
-  string surname = 3;
-  Position position = 4;
+  string name = 1;
+  string surname = 2;
+  Position position = 3;
 }
 
 message WorkerResponse{
